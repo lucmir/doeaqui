@@ -1,0 +1,9 @@
+*.rbc
+.rspec
+*.orig
+.env
+*.bowerrc
+.powenv
+.byebug_history
+
+Gemfile.lock, .ruby-version, .ruby-gemset
