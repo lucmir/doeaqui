@@ -1,24 +1,11 @@
-# README
+# Doeaqui Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Tests
 
-Things you may want to cover:
+Tests are written using [RSpec](https://github.com/rspec/rspec-rails) testing framework
+and [Factory Girl] (https://github.com/thoughtbot/factory_girl_rails) for factory definition.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run *specs*:
+```
+bundle exec rspec
+```
