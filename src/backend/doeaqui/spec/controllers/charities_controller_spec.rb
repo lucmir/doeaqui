@@ -12,8 +12,11 @@ RSpec.describe CharitiesController, :type => :controller do
 
     it "responds with charities data" do
       get :index
-      #TODO validate that response is not empty and has one key "charities"
-      puts response.body
+      expect(response.body).not_to be_empty
+      parsed_body = JSON.parse(response.body)
+      expect(parsed_body).to include("charities")
+      expect(parsed_body["charities"].length).to be(1)
+      expect(parsed_body["charities"].first).to include("id")
     end
   end
 end
