@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :location do
-    state "MyString"
-    city "MyString"
-    street "MyText"
-    number "MyString"
-    complement "MyString"
+    state "MG"
+    city "Sete Lagoas"
+    street "Cracovia"
+    number "139"
+    complement "1"
   end
 end
