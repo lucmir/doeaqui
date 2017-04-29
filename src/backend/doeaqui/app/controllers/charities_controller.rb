@@ -4,7 +4,7 @@ class CharitiesController < ApplicationController
   def index
     @charities = Charity.all
     render json: {
-      charities: @charities
+      charities: @charities.map { |charity| serializer.call(charity) }
     }
   end
 
@@ -34,6 +34,10 @@ class CharitiesController < ApplicationController
   end
 
   private
+
+    def serializer
+      @serializer ||= CharitySerializer.new
+    end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_charity

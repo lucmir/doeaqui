@@ -18,5 +18,14 @@ RSpec.describe CharitiesController, :type => :controller do
       expect(parsed_body["charities"].length).to be(1)
       expect(parsed_body["charities"].first).to include("id")
     end
+
+    it "should execute call method from serializer" do
+      serializer = double(:serializer)
+      allow(serializer).to receive(:call) { 1 }
+      allow(subject).to receive(:serializer) { serializer }
+
+      expect(serializer).to receive(:call)
+      get :index
+    end
   end
 end
