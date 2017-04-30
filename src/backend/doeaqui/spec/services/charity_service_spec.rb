@@ -4,9 +4,9 @@ RSpec.describe CharityService do
   describe "fetch_charities" do
     let(:location) { FactoryGirl.create(:location, state: "MG",
                                         city: "BH", district: "Pampulha") }
-    let!(:charity) { FactoryGirl.create(:charity, location: location) }
     let(:other_location) { FactoryGirl.create(:location, state: "SP",
                                               city: "SP", district: "Centro") }
+    let!(:charity) { FactoryGirl.create(:charity, location: location) }
     let!(:other_charity) { FactoryGirl.create(:charity, location: other_location) }
 
     it "returns all charities if no filter specified" do
