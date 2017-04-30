@@ -2,9 +2,9 @@ require "rails_helper"
 
 RSpec.describe CharitiesController, :type => :controller do
   describe "GET #index" do
-    let(:location) { FactoryGirl.create(:location, state: "MG", city: "BH") }
+    let(:location) { FactoryGirl.create(:location, city: "BH", district: "Pampulha") }
     let!(:charity) { FactoryGirl.create(:charity, location: location) }
-    let(:other_location) { FactoryGirl.create(:location, state: "SP", city: "SP") }
+    let(:other_location) { FactoryGirl.create(:location, city: "SP", district: "Centro") }
     let!(:other_charity) { FactoryGirl.create(:charity, location: other_location) }
 
     it "responds successfully with an HTTP 200 status code" do
@@ -31,15 +31,15 @@ RSpec.describe CharitiesController, :type => :controller do
       get :index
     end
 
-    xit "should filter by state" do
-      get :index, params: { state: "SP" }
+    xit "should filter by city" do
+      get :index, params: { city: "SP" }
       parsed_body = JSON.parse(response.body)
       expect(parsed_body).to include("charities")
       expect(parsed_body["charities"].length).to be(1)
     end
 
-    xit "should filter by city" do
-      get :index, params: { city: "SP" }
+    xit "should filter by city and district" do
+      get :index, params: { city: "BH", district: "Pampulha" }
       parsed_body = JSON.parse(response.body)
       expect(parsed_body).to include("charities")
       expect(parsed_body["charities"].length).to be(1)

@@ -1,9 +1,10 @@
 class CharityService
-  def fetch_charities(city = nil, district = nil)
-    if city.nil? and district.nil?
+  def fetch_charities(state = nil, city = nil, district = nil)
+    if state.nil?
       Charity.all
     else
-      filters = { city: city }
+      filters = { state: state }
+      filters.merge!({ city: city }) unless city.nil?
       filters.merge!({ district: district }) unless district.nil?
       Charity.includes(:location).where(locations: filters)
     end
