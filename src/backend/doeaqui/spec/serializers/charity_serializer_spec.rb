@@ -14,6 +14,7 @@ RSpec.describe CharitySerializer do
         location: {
           state: "MG",
           city: "Sete Lagoas",
+          district: "Mangabeiras",
           street: "Cracovia",
           number: "139",
           complement: "1"

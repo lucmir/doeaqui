@@ -2,7 +2,8 @@ require "rails_helper"
 
 RSpec.describe CharitiesController, :type => :controller do
   describe "GET #index" do
-    let!(:charity) { FactoryGirl.create(:charity) }
+    let(:location) { FactoryGirl.create(:location, state: "MG", city: "BH") }
+    let!(:charity) { FactoryGirl.create(:charity, location: location) }
     let(:other_location) { FactoryGirl.create(:location, state: "SP", city: "SP") }
     let!(:other_charity) { FactoryGirl.create(:charity, location: other_location) }
 

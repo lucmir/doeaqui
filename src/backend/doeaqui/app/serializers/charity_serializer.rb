@@ -13,6 +13,7 @@ class CharitySerializer
     {
       state: location.state,
       city: location.city,
+      district: location.district,
       street: location.street,
       number: location.number,
       complement: location.complement
