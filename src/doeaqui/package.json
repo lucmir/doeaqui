@@ -31,6 +31,11 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.0",
     "webpack-dev-server": "^2.4.5"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint app/javascript/**/*.js app/javascript/**/*.jsx"
   }
 }
