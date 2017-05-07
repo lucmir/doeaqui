@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Charities = props => (
-  <div>Charities {props.name}!</div>
-);
+function Charities() {
+  return <div>Charities!</div>;
+}
 
 export default Charities;
