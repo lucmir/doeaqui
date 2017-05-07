@@ -2,13 +2,13 @@ class CharitiesController < ApplicationController
   before_action :set_charity, only: [:show]
 
   def index
-    #filter_params = fetch_filter_params
-    #charities = service.fetch_charities(filter_params[:state],
-    #                                     filter_params[:city],
-    #                                     filter_params[:district])
-    #render json: {
-    #  charities: charities.map { |charity| serializer.call(charity) }
-    #}
+    filter_params = fetch_filter_params
+    charities = service.fetch_charities(filter_params[:state],
+                                         filter_params[:city],
+                                         filter_params[:district])
+    render json: {
+      charities: charities.map { |charity| serializer.call(charity) }
+    }
   end
 
   def show
