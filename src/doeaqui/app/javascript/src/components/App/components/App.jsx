@@ -23,7 +23,7 @@ const Home = () => (
     </div>
     <header className="subnav-hero-section">
       <h1 className="subnav-hero-headline">
-        &nbsp;Doe Aqui!<br></br>
+        Doe Aqui!<br></br>
         <i className="fa fa-heart-o" aria-hidden="true"></i>
       </h1>
       <ul className="subnav-hero-subnav">
