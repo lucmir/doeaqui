@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Charities from "./../../Charities/components/Charities";
+require('./main.scss');
 
 class App extends Component {
   render() {
@@ -15,6 +16,22 @@ class App extends Component {
   }
 }
 
-const Home = () => <h1>Hello from Home!</h1>;
+const Home = () => (
+  <div>
+    <div>
+      <p></p>
+    </div>
+    <header className="subnav-hero-section">
+      <h1 className="subnav-hero-headline">
+        &nbsp;Doe Aqui!<br></br>
+        <i className="fa fa-heart-o" aria-hidden="true"></i>
+      </h1>
+      <ul className="subnav-hero-subnav">
+        <li><a href="#" className="is-active">Onde doar</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </header>
+  </div>
+);
 
 export default App;
