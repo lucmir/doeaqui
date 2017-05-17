@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./style.css";
-import Header from "../Header";
+import Charities from "../Charities";
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Charities />
       </div>
     );
   }
