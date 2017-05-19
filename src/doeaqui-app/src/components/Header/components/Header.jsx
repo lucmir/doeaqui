@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import FontAwesome from 'react-fontawesome';
-import "../style.css";
 
 class Header extends Component {
   renderTabItem(link, text) {
-    let className = "nav-item is-tab";
+    let className = "nav-item";
     const currentPath = window.location.pathname;
     if(currentPath === link) {
       className += " is-active";

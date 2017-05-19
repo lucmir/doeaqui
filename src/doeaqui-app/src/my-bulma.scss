@@ -1,0 +1,11 @@
+// 1. Import the initial variables
+
+$primary: #80BD9E;
+
+@import "~bulma";
+
+.top-bar {
+  height: 120px;
+  background-color: #f1f1f2;/*#00BCD4;*/
+}
+
