@@ -3,7 +3,7 @@ import FontAwesome from 'react-fontawesome';
 import "../style.css";
 
 class Header extends Component {
-  renderTabItem = (link, text) => {
+  renderTabItem(link, text) {
     let className = "nav-item is-tab";
     const currentPath = window.location.pathname;
     if(currentPath === link) {
@@ -17,7 +17,6 @@ class Header extends Component {
   }
 
   render() {
-    const path = window.location.pathname;
     return (
       <div>
         <nav className="top-bar nav has-shadow" id="top">

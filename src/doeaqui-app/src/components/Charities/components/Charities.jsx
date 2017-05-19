@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../../Header";
 
 class Charities extends Component {
-  renderCharities = () => {
+  renderCharities() {
     return (
       <section className="section">
         <div className="container">
